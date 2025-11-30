@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdView - Earn Money Watching Ads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AdView</h1>
+                <span>Earn Money Watching Ads</span>
+            </div>
+            <div class="user-info">
+                <span id="userBalance">$0.00</span>
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Start Earning Money Today!</h2>
+            <p>Watch ads and get paid instantly. No investment required.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>$0.10</h3>
+                    <p>Per Ad View</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Instant</h3>
+                    <p>Payout</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ads-container">
+            <h3>Available Ads</h3>
+            <div id="adsList" class="ads-grid">
+                <!-- Ads will be loaded here -->
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h3>How It Works</h3>
+            <div class="steps">
+                <div class="step">
+                    <span>1</span>
+                    <h4>Register</h4>
+                    <p>Create your free account</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <h4>Watch Ads</h4>
+                    <p>View available advertisements</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <h4>Earn Money</h4>
+                    <p>Get paid for every ad view</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <h4>Withdraw</h4>
+                    <p>Cash out your earnings</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Login to Your Account</h3>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Create New Account</h3>
+            <form id="registerForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ad View Modal -->
+    <div id="adModal" class="modal">
+        <div class="modal-content ad-content">
+            <span class="close">&times;</span>
+            <div id="adDisplay">
+                <h3 id="adTitle"></h3>
+                <div id="adBody"></div>
+                <div class="timer">
+                    <p>Please watch the ad for <span id="countdown">30</span> seconds</p>
+                </div>
+                <button id="claimReward" disabled>Claim Reward ₹0.10</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
